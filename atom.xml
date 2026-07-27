@@ -2,10 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://moon-light-inc.github.io</id>
     <title>Moon Light</title>
-    <updated>2026-07-27T16:41:38.784Z</updated>
+    <updated>2026-07-27T16:45:02.923Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://moon-light-inc.github.io"/>
     <link rel="self" href="https://moon-light-inc.github.io/atom.xml"/>
+    <subtitle>Moon Light项目官网</subtitle>
     <logo>https://moon-light-inc.github.io/images/avatar.png</logo>
     <icon>https://moon-light-inc.github.io/favicon.ico</icon>
     <rights>All rights reserved 2026, Moon Light</rights>
