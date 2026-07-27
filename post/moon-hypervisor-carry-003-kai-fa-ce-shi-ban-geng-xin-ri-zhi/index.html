@@ -5,7 +5,7 @@
     
 <meta charset="utf-8" >
 
-<title>关于 | Moon Light</title>
+<title>Moon Hypervisor Carry 0.0.3开发测试版更新日志 | Moon Light</title>
 <meta name="description" content="">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -86,50 +86,88 @@
       <div class="content-container">
         <div class="post-detail">
           
-          <h2 class="post-title">关于</h2>
+          <h2 class="post-title">Moon Hypervisor Carry 0.0.3开发测试版更新日志</h2>
           <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2208-02-07</span>
+            <span><i class="icon-calendar-outline"></i> 2026-07-28</span>
             
           </div>
           <div class="post-content">
-            <blockquote>
-<p>欢迎来到我的网站呀，很高兴遇见你！</p>
-</blockquote>
+            <p>折腾了十几个小时，终于是把 Carry 0.0.3 给搓出来了，作为 Moon Hypervisor 的第一个公开镜像，我得给它写一个更新日志。</p>
 <hr>
-<h2 id="关于本站">🏠 关于本站</h2>
-<p>本站由 <strong>Moon Light</strong> 构建，是 <strong>Moon Light 项目</strong> 的官方站点与信息汇聚中心。</p>
-<p>Moon Light 是一个专注于虚拟化与桌面融合的开源项目集合，核心产品为 <strong>Moon Hypervisor</strong>——基于 Arch Linux + CachyOS 内核、采用 Hyprland 作为桌面环境的 All-in-One 虚拟化系统。</p>
-<hr>
-<h2 id="关于我">👨‍💻 关于我</h2>
-<p>我是 <strong>Moon Light</strong>，Moon Light 项目的发起人与主要维护者。</p>
+<h3 id="主要改动">🧩 主要改动</h3>
 <ul>
-<li>计算机、天文、化学、物理、历史、音乐爱好者</li>
-<li>喜欢折腾系统、研究底层</li>
-<li>目前正在开发 Moon Hypervisor 及其周边生态</li>
+<li>默认用户从 <code>liveuser</code> 改为 <code>moon</code></li>
+<li>用户 <code>moon</code> 加入 <code>wheel</code>、<code>libvirt</code>、<code>kvm</code> 组</li>
+<li><code>wheel</code> 组配置免密 <code>sudo</code></li>
 </ul>
 <hr>
-<h2 id="联系我">📬 联系我</h2>
-<p>如果你对项目感兴趣，或想聊聊技术、天文、音乐、系统构建……欢迎通过以下方式找到我：</p>
+<h3 id="修过的坑">🐛 修过的坑</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">问题</th>
+<th style="text-align:left">状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Live 环境下 <code>sudo</code> 无法提权</td>
+<td style="text-align:left">✅ 已修</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>virtnodedevd</code> 服务未启动导致虚拟机无法创建</td>
+<td style="text-align:left">✅ 已修</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>archiso</code> 钩子缺失导致 ISO 无法引导</td>
+<td style="text-align:left">✅ 已修</td>
+</tr>
+<tr>
+<td style="text-align:left">root 账户锁定导致无法 <code>su -</code></td>
+<td style="text-align:left">✅ 已修</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>liveuser</code> 不在 <code>kvm</code> 组导致 <code>/dev/kvm</code> 权限不足</td>
+<td style="text-align:left">✅ 已修</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="技术栈">📦 技术栈</h3>
 <ul>
-<li>邮箱：<strong>Moon_Hypervisor@126.com</strong></li>
-<li>QQ：<strong>3329593564</strong></li>
-<li>QQ 群：<strong>1064455404</strong></li>
+<li>底层：Arch Linux</li>
+<li>内核：CachyOS 7.1.3-2</li>
+<li>桌面：Hyprland</li>
+<li>虚拟化：KVM + QEMU + libvirt</li>
+<li>远程管理：Cockpit + cockpit-machines</li>
+<li>压缩：zstd（开发版）</li>
 </ul>
 <hr>
-<h2 id="项目状态">🧭 项目状态</h2>
+<h3 id="下载与反馈">📥 下载与反馈</h3>
+<p>ISO 已经上传到附件下载页，GitHub 仓库也已同步更新。如果遇到问题，欢迎在群里反馈或提 Issue。</p>
+<hr>
+<h3 id="下一版本计划carry-004">🧭 下一版本计划（Carry 0.0.4）</h3>
 <ul>
-<li><strong>Carry（金丝雀）</strong>：开发中，Live CD 已可启动</li>
-<li><strong>Moon（月）</strong>：稳定版，正在完善安装器</li>
-<li><strong>XLib（无头版）</strong>：计划中，面向服务器/算力节点</li>
+<li>预设时区为 <code>Asia/Shanghai</code></li>
+<li>增加hostname、os-release</li>
+<li>自动登录后自动打开Hyprland</li>
 </ul>
 <blockquote>
-<p>更多信息请关注项目主页或 GitHub 仓库。</p>
+<p>Moon Light，写于2026.7.28 凌晨1:05</p>
 </blockquote>
 
           </div>
         </div>
 
         
+          <div class="next-post">
+            <a class="purple-link" href="https://moon-light-inc.github.io/post/xin-wang-zhan-shang-xian-la/">
+              <h3 class="post-title">
+                下一篇：新网站，上线啦！！！
+              </h3>
+            </a>
+          </div>
+          
       </div>
 
       
